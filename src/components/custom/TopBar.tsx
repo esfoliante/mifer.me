@@ -121,16 +121,16 @@ export default function Topbar() {
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <div className="flex flex-col space-y-6 mt-8">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-neutral-950">
+                <div className="flex flex-col space-y-6 mt-8 px-5">
                   {/* Mobile Logo */}
-                  <div className="flex items-center space-x-2 pb-4 border-b border-border">
+                  <div className="flex items-center space-x-2 pb-4">
                     <Image 
-                      src="/logo-min.png" 
-                      alt="Avogg Logo" 
+                      src="/mf-logo.svg" 
+                      alt="MF Logo" 
                       width={32} 
                       height={32}
-                      className="h-8 w-8"
+                      className="h-16 w-16"
                     />
                   </div>
                   
@@ -145,10 +145,10 @@ export default function Topbar() {
                           onClick={(e) => handleNavigationClick(item, e)}
                           className={`text-lg font-medium transition-colors hover:text-muted-foreground ${
                             item.disabled 
-                              ? 'text-foreground/50 cursor-not-allowed opacity-50' 
+                              ? 'text-muted-foreground/50 cursor-not-allowed opacity-50' 
                               : isActive 
-                                ? 'text-foreground border-b-2 border-foreground' 
-                                : 'text-foreground'
+                                ? 'text-white' 
+                                : 'text-gray-100'
                           }`}
                         >
                           {item.name}
@@ -158,7 +158,7 @@ export default function Topbar() {
                   </nav>
                   
                   {/* Mobile Contact Button */}
-                  <div className="pt-4 border-t border-border space-y-3">
+                  <div className="pt-4 space-y-3">
                     <Button onClick={handleResumeDownload} className="w-full">
                       My resume
                     </Button>

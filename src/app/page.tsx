@@ -10,8 +10,8 @@ const landingImages = [
 export default function Home() {
   return (
         <section className="h-screen w-screen flex items-center justify-center container mx-auto p-8 text-center">
-            <div className="grid md:grid-cols-2 h-screen w-screen items-center gap-8">
-                <div className="flex flex-col space-y-10 text-left">
+            <div className="grid md:grid-cols-2 h-screen w-screen items-center md:gap-8">
+                <div className="flex flex-col space-y-5 md:space-y-10 text-left">
                     <h1 className="text-2xl md:text-4xl font-bold leading-loose">Hi,<br/>I&apos;m Miguel Ferreira</h1>
                     <p>I&apos;m a software developer with a passion for the entrepreneurship world!</p>
                 </div>
